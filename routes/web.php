@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,3 +31,4 @@ Route::get('/users/{id?}', function ($id = null) {
     return 'User ID: ' . $id;
 });
 
+Route::get('/user/{id}', [UserController::class, 'show']);
